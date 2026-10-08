@@ -1,0 +1,53 @@
+# ONE CPU 1.1 16 · 1.6 Gbit/s
+# The other version. Same 32-base CPU. The plug is the width.
+project:
+  title:        "ONE CPU 1.1 16"
+  author:       "Joshua Luke Nuijens / Axiom 1 Technology, LLC"
+  discord:      ""
+  description:  "ONE CPU 1.1 16 · 1.6 Gbit/s. Same 32 bases. One wire is the UART. Eight wires are the mix. Sixteen wires, both edges, are the line."
+  language:     "Verilog"
+  clock_hz:     50000000
+
+  tiles: "6x4"
+
+  top_module:  "tt_um_jlnuijens_one11_16"
+
+  source_files:
+    - "project.v"
+    - "one_cpu11.v"
+    - "js_uart_fire.v"
+    - "js_range.v"
+    - "js_spi_fire.v"
+    - "js_i2c_fire.v"
+    - "js_line_fire.v"
+    - "js_tap_fire.v"
+
+pinout:
+  ui[0]: "FIRE"
+  ui[1]: "HOT"
+  ui[2]: "LINE_IN"
+  ui[3]: "MAP0"
+  ui[4]: "MAP1"
+  ui[5]: "RANGE0"
+  ui[6]: "RANGE1"
+  ui[7]: "RANGE2"
+
+  uo[0]: "TX_OR_MIX0"
+  uo[1]: "BUSY_OR_MIX1"
+  uo[2]: "ONES_OR_MIX2"
+  uo[3]: "GOT_OR_MIX3"
+  uo[4]: "MOSI_OR_MIX4"
+  uo[5]: "SCLK_OR_MIX5"
+  uo[6]: "CS_OR_MIX6"
+  uo[7]: "DP_OR_MIX7"
+
+  uio[0]: "SEQ0_OR_LINE0"
+  uio[1]: "SEQ1_OR_LINE1"
+  uio[2]: "SEQ2_OR_LINE2"
+  uio[3]: "SEQ3_OR_LINE3"
+  uio[4]: "SEQ4_OR_LINE4"
+  uio[5]: "SEQ5_OR_LINE5"
+  uio[6]: "SEQ6_OR_LINE6"
+  uio[7]: "SEQ7_OR_LINE7"
+
+yaml_version: 6
